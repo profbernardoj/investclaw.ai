@@ -2,6 +2,23 @@
 
 All notable changes to EverClaw are documented here.
 
+## [2026.3.25] - 2026-03-19
+
+### Added
+- **Bootstrap Micro-Funding System** — Zero-friction onboarding: new users receive 0.0008 ETH + 2.00 USDC on Base mainnet automatically
+  - `scripts/bootstrap-client.mjs` (NEW) — Client-side bootstrap with PoW anti-Sybil, machine fingerprint dedup, macOS keychain integration
+  - Auto-bootstrap integrated into `scripts/everclaw-wallet.mjs` setup flow (1-line, graceful failure)
+  - API live at `api.everclaw.xyz` (Vercel + Upstash Redis)
+  - X post verification for +1 USDC bonus via Twitter Syndication API
+  - 6 verified real transfers on Base mainnet during testing
+
+### Security
+- PoW challenge: 6 leading zeros SHA-256, 60s window
+- Machine fingerprint deduplication (macOS ioreg → /etc/machine-id → hostname fallback)
+- 500 bootstraps/day global cap (atomic Redis Lua)
+- Tweet reuse prevention, bonus double-claim prevention
+- Partial failure handling (ETH sent but USDC failed → logged to Redis for manual retry)
+
 ## [2026.3.24] - 2026-03-17
 
 ### Added
