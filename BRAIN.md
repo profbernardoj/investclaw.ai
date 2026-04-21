@@ -21,7 +21,7 @@
 
 ## Pending Decisions
 
-<!-- Things that need a decision from David. -->
+<!-- Things that need a decision from [OWNER_NAME]. -->
 
 
 
