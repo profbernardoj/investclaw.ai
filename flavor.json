@@ -1,10 +1,9 @@
 {
-  "name": "Morpheus Skill",
-  "slug": "morpheus-skill",
-  "domain": "morpheusclaw.com",
-  "description": "The canonical Morpheus decentralized AI agent skill for OpenClaw",
-  "remote": "https://github.com/profbernardoj/morpheus-skill.git",
+  "name": "Invest Claw",
+  "slug": "investclaw",
+  "domain": "investclaw.ai",
+  "description": "AI agent for investment analysis",
+  "remote": "https://github.com/profbernardoj/investclaw.ai.git",
   "defaultModel": "glm-5",
-  "persona": "Morpheus decentralized AI assistant",
-  "canonical": true
+  "persona": "Investment AI assistant"
 }
